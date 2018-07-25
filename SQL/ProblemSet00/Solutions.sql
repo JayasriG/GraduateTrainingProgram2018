@@ -60,8 +60,8 @@ Q8>Select the Employee in product depatment who has the least salary
   Answer
   TIM ARCHER|Product|48834
 Q9>Select the count of Empolyees in Health with maximum salary
-                           
- 
+                           select count(emp_id),max(salary) from emp where dept_id=(select dept_id from department where dept_name='Health')
+Answer 6|94791
 Q10>Select the Employees who report to Natasha Stevens
                                select name from emp where manager_id=(select emp_id from emp where name='NATASHA STEVENS');
   Record count=2
