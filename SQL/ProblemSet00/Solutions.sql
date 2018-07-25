@@ -41,12 +41,9 @@ ADAM JUSTIN|VANESSA PARY
 NATASHA STEVENS|ADAM WAYNE
 NATASHA STEVENS|JOSEPH ANGELIN
 Q5>Select the Empolyee who is a Manager and has least salary
-                             
-                                                            
-                                                            
-                                                            
-                                                            
-                                                            
+                           select name,min(salary) from emp inner join department on emp.name=department.dept_name;
+Answer:A165|Natasha Stevens|D05|31377|A298
+record count=1                                                                
 Q6>Select the total number of Employees in Communications departments
                              select count(emp_id),Dept_name from emp inner join department on emp.dept_id=department.dept_id where dept_name='Communications';
 Record Count=1
@@ -80,11 +77,11 @@ JOHN HELLEN|Health|Tim Archer
 Q12>Display the Department id,Employee ids and Manager ids for the Communications department
                                select emp_id,department.Dept_id,manager_id from emp inner join department on emp.dept_id=department.dept_id where dept_name='Communications';
 A116|D02|A187
+A121|D02|A187
 A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
+A187|D02|A187
+A194|D02|A187
+A198|D02|A187
 Q13>Select the Average Expenses for Each dept with Dept id and Dept name
                                select * from department inner join (select avg(salary),dept_id from emp group by dept_id) as t on department.dept_id=t.dept_id;
 D01|Health|Tim Archer|55958.75|D01
