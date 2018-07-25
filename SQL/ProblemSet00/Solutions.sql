@@ -21,7 +21,7 @@ Answer
 A165|Natasha Stevens|D05|31377|A298
 A120|Tim Archer|D01|48834|A298
 A187|Adam Justin|D02|80543|A298
-A165|Natasha Stevens|D05|31377|A298
+A178|Bruce Wills|D03|66861|A298
 Q4>Select the Employee who is also a Manager                                                  
                          select e.name,b.name from emp e join emp b where b.manager_id=e.emp_id;
 record count=14
@@ -64,10 +64,7 @@ Q8>Select the Employee in product depatment who has the least salary
   TIM ARCHER|Product|48834
 Q9>Select the count of Empolyees in Health with maximum salary
                            
-  Record Count=1
-  Answer
-  TIM ARCHER|Product|48834
-  TIM ARCHER|Product|48834
+ 
 Q10>Select the Employees who report to Natasha Stevens
                                select name from emp where manager_id=(select emp_id from emp where name='NATASHA STEVENS');
   Record count=2
