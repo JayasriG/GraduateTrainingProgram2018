@@ -3,7 +3,7 @@
 
 
 Q1> Select the Employee with the top three salaries
-                    select name,salary from emp a where 3>=(select count(distinct salary) from emp b where b.salary>=a.sal
+                    select name,salary from emp a where 3>=(select count(distinct salary) from emp b where b.salary>=a.salary) order by a.salary desc;
 record count=3
 Answer
 TARA CUMMINGS|99475
@@ -95,31 +95,29 @@ D02|Communications|Adam Justin|48271.3333333333|D02
 D03|Product|Bruce Wills|55289.6666666667|D03
 D04|Insurance|Robert Swift|64020.0|D04
 D05|Finanace|Natasha Stewens|56660.3333333333|D05
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
-A133|D02|A187
+Q14>Select the total expense for the department finance
+                              select sum(salary) from emp where dept_id= (select dept_id from department where dept_name='Finance');
+169981
+Q15>Select the department which spends the least with Dept id and Dept manager name
+                              select * from department inner join (select max(sal),dept_id from(select sum(salary) as sal,dept_id from emp group by dept_id)) as t on department.dept_id=t.dept_id;
+D02|Communications|Adam Justin|289628|D02
+Q16>Select the count of Employees in each department
+                              select dept_id,count(emp_id) from emp group by dept_id;
+D01|4
+D02|6
+D03|3
+D04|2
+D05|3
+Q17>Select the count of Employees in each department having salary <10000
+                          select count(emp_id),dept_id from emp  group by dept_id having salary<10000;
+empty set
+Q18>Select the total number of Employees in Dept id D04
+                          select count(emp_id) from emp  where dept_id='D04';
+2
+Q19>Select all department details of the Department with Maximum Employees
+                          select * from Department d inner join (select  max(cnt),dept_id from (select count(emp_id) as cnt,dept_id from emp group by dept_id)) as e on d.dept_id=e.dept_id;
+D02|Communications|Adam Justin|6|D02
+Q20>Select the Employees who has Tim Cook as their manager
+                           select name from emp where manager_id=(select emp_id from emp where name='TIM COOK');
+empty set
+
