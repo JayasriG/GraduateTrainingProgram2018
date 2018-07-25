@@ -57,20 +57,69 @@ Q7>Select the Employee in Finance Department who has the top salary
     Record Count=1             
     Answer
         ADAM WAYNE|Finanace|94324
- Q8>Select the Employee in product depatment who has the least salary
+Q8>Select the Employee in product depatment who has the least salary
                               select name,Dept_name,min(salary) from emp inner join department on emp.dept_id=department.dept_id where dept_name='Product';
   Record Count=1
   Answer
   TIM ARCHER|Product|48834
-  Q9>Select the count of Empolyees in Health with maximum salary
+Q9>Select the count of Empolyees in Health with maximum salary
                            
   Record Count=1
   Answer
   TIM ARCHER|Product|48834
   TIM ARCHER|Product|48834
-  Q10>Select the Employees who report to Natasha Stevens
+Q10>Select the Employees who report to Natasha Stevens
                                select name from emp where manager_id=(select emp_id from emp where name='NATASHA STEVENS');
   Record count=2
   Answer:ADAM WAYNE
-JOSEPH ANGELIN
-  
+         JOSEPH ANGELIN
+Q11>Display the Employee name,Employee count,Dep name,Dept manager in the Health department
+                               select name,dept_name,dept_manager from emp inner join department on emp.dept_id=department.dept_id where dept_name='Health';
+    Record count=4
+Answer:PAUL VINCET|Health|Tim Archer
+BRAD MICHAEL|Health|Tim Archer
+EDWARD CANE|Health|Tim Archer
+JOHN HELLEN|Health|Tim Archer
+Q12>Display the Department id,Employee ids and Manager ids for the Communications department
+                               select emp_id,department.Dept_id,manager_id from emp inner join department on emp.dept_id=department.dept_id where dept_name='Communications';
+A116|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+Q13>Select the Average Expenses for Each dept with Dept id and Dept name
+                               select * from department inner join (select avg(salary),dept_id from emp group by dept_id) as t on department.dept_id=t.dept_id;
+D01|Health|Tim Archer|55958.75|D01
+D02|Communications|Adam Justin|48271.3333333333|D02
+D03|Product|Bruce Wills|55289.6666666667|D03
+D04|Insurance|Robert Swift|64020.0|D04
+D05|Finanace|Natasha Stewens|56660.3333333333|D05
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
+A133|D02|A187
