@@ -28,7 +28,7 @@ tasks - When a development team works on a story they often find it easier to br
   Set of all requirements prioritized in order, which is made available by the Product Owner to the Scrum Team. 
 
 5)What is Scrum Sprint?
-  A time duration of 2-4 weeks where a useable,potentially releasable product Increment is created.
+  A time duration of 2-4 weeks where a useable,potentially releasable product increment is created.
 
 6)What are the artifacts of Scrum process?
  Product Backlog
@@ -41,12 +41,12 @@ tasks - When a development team works on a story they often find it easier to br
 8)What is the role of the Product Owner?
  They are focused on understanding business and market requirements, then prioritize the work that they want to be get it done from the team.
 
-9)What are the different roles in Scrum
+9)What are the different roles in Scrum?
  Product Owner-They are focused on understanding business and market requirements, then prioritize the work that they want to be get it done from the team.
  Scrum Master-Facilitates communication between Product owner and team members,conducts scrum meetings,helps in removing the blockers
  Scrum Team -Usually 5 to 7 members have differing skill sets.
 
-10)What are the responsibilities of a Scrum Master
+10)What are the responsibilities of a Scrum Master?
  Facilitates communication between Product owner and team members,conducts scrum meetings,help in removing the blockers
 
 11)What are different ceremonies and their importance in Scrum?
@@ -60,7 +60,7 @@ tasks - When a development team works on a story they often find it easier to br
 Sprint planning-A team planning meeting that determines what to complete in the coming sprint.
 Sprint retrospective-A review of what did and didn't go well with actions to make the next sprint better.
 
-13)What is the difference between agile & scrum
+13)What is the difference between agile & scrum?
  Agile-Set of principles and values that help in providing business value to the product owners
  Scrum-one of the methodology/framework that helps in implementing Agile
 
