@@ -1,23 +1,27 @@
 
 1)How does agile testing (development) methodology differ from other testing (development) methodologies?
- Agile
+Agile
 testing at early stage reduces defect leakage and loss of money
 easy to change or rectify defects
 easy to include changes in the plan
 continuous collaboration with the business person
- Others
+Others
 testing done at final stage.If there is any defect in the initial stage it is reflected till the end.
 there is no continuous colloration with business person
+
 2)What are the most important components of Agile? 
- individuals and interactions over process and tools
- working software over comprehensive documents
- customer collaboration over contract negotiation
- responding to change over following a plan
+individuals and interactions over process and tools
+working software over comprehensive documents
+customer collaboration over contract negotiation
+responding to change over following a plan
+
 3)What is difference between Epic,features, User stories & Tasks?
 Epic -finalized product 
 Features-A distinguishing characteristic or capability of a software application (performance, portability, scalability, functionality).
 User stories-where the finalized product is broken down to smaller levels.A very high-level definition of a requirement.Stories are written in a language that is easily understood by the Product Owner and business users-the way they can understand the progress that has been achieved by completing the story
-tasks - When a development team works on a story they often find it easier to break it down into tasks(smaller part of work) for better understanding of what needs to be done.4)Explain what is a product backlog in Scrum
+tasks - When a development team works on a story they often find it easier to break it down into tasks(smaller part of work) for better understanding of what needs to be done.
+
+4)Explain what is a product backlog in Scrum
   Set of all requirements prioritized in order, which is made available by the Product Owner to the Scrum Team. 
 
 5)What is Scrum Sprint?
