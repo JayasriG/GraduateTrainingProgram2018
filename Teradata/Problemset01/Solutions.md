@@ -304,12 +304,6 @@ Q12>List the hotel names and room numbers of any hotel rooms that have not been 
 | H432     | Brownstone Hotel |     345 |
 +----------+------------------+---------+
 11 rows in set
-+----------+------------------+
-| hotel_no | name             |
-+----------+------------------+
-| H432     | Brownstone Hotel |
-+----------+------------------+
-1 row in set
 Q13>List the hotel name and city of the hotel with the highest priced room.
 select name,city,room.hotel_no,room.room_no,price from room inner join hotel where hotel.hotel_no=room.hotel_no having price = (select max(price) from room);
 +------------+----------+----------+---------+--------+
