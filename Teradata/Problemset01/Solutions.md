@@ -287,23 +287,17 @@ Q11>List the names and cities of guests who began a stay in New York in August.
 +---------------+------------+
 2 rows in set
 Q12>List the hotel names and room numbers of any hotel rooms that have not been booked.
- select hotel.hotel_no,hotel.name,booking.room_no from hotel inner join booking  where hotel.hotel_no  not in (select hotel.hotel_no from hotel inner join booking where hotel.hotel_no=booking.hotel_no);
+select hotel.hotel_no,hotel.name,room.room_no from hotel inner join room  where hotel.hotel_no=room.hotel_no and room_no  not in (select room_no from booking );
 +----------+------------------+---------+
 | hotel_no | name             | room_no |
 +----------+------------------+---------+
-| H432     | Brownstone Hotel |     412 |
-| H432     | Brownstone Hotel |     412 |
-| H432     | Brownstone Hotel |    1001 |
-| H432     | Brownstone Hotel |    1001 |
-| H432     | Brownstone Hotel |    1201 |
-| H432     | Brownstone Hotel |    1267 |
-| H432     | Brownstone Hotel |     223 |
-| H432     | Brownstone Hotel |     223 |
-| H432     | Brownstone Hotel |     467 |
-| H432     | Brownstone Hotel |     345 |
-| H432     | Brownstone Hotel |     345 |
+| H111     | Empire Hotel     |     313 |
+| H235     | Park Place       |    1289 |
+| H432     | Brownstone Hotel |     876 |
+| H432     | Brownstone Hotel |     898 |
+| H437     | Clairmont Hotel  |     257 |
 +----------+------------------+---------+
-11 rows in set
+5 rows in set
 Q13>List the hotel name and city of the hotel with the highest priced room.
 select name,city,room.hotel_no,room.room_no,price from room inner join hotel where hotel.hotel_no=room.hotel_no having price = (select max(price) from room);
 +------------+----------+----------+---------+--------+
