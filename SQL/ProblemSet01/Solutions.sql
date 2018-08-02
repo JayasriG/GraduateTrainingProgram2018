@@ -181,6 +181,7 @@ select hotel.hotel_no,name,city,type,price from room inner join hotel on room.ho
 +----------+--------------+----------+------+--------+
 4 rows in set
 Q3>List the names and cities of all guests, ordered according to their cities.
+select guest_name,city from guest order by city;
 +---------------+--------------+
 | guest_name    | city         |
 +---------------+--------------+
@@ -193,6 +194,7 @@ Q3>List the names and cities of all guests, ordered according to their cities.
 +---------------+--------------+
 6 rows in set
 Q4>List all details for non-smoking rooms in ascending order of price
+select hotel.hotel_no,name,city,type,price from room inner join hotel on hotel.hotel_no=room.hotel_no and type='N' order by price;
 +----------+-----------------+----------+------+--------+
 | hotel_no | name            | city     | type | price  |
 +----------+-----------------+----------+------+--------+
@@ -237,6 +239,7 @@ Q7>List the average price of a room.
 | 147.500000 | H437     |
 | 170.000000 | H498     |
 +------------+----------+
++------------+
 6 rows in set
 Q8>List hotel names, their room numbers, and the type of that room.
 select name,room_no,type from room inner join hotel on room.hotel_no=hotel.hotel_no;
