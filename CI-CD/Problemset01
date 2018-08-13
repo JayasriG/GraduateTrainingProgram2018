@@ -1,0 +1,45 @@
+1. Why should you use a version control tool?
+	to have a history of codes
+	helps other developers to get or update code easily
+
+2. Which of the following correctly describes what a unit test is 
+
+ a,d
+
+        a. It is a level of software testing where the individual units are tested.
+
+        b. Unit tests generally involve validating how various modules interact with each other.
+
+        c. Unit tests help to measure the response time of an application when subjected to high loads
+
+        d. Unit tests usually involve asserting the final output against the expected output using the inputs provided as part of the tests.
+
+ a,d
+
+3. What are the various build tools used in Java?
+	ANT,GRADLE,MAVEN
+
+4. One of your projects fail compilation errors due to missing JAR files that are needed for your project. Which of the following tools can help to fix the errors
+
+a. Tomcat Webserver b. GIT c. Apache ANT d. Apache Maven
+	c,d
+ 
+
+5. What is meant by a "commit" in a version control Tool? 
+  creates versions of code
+
+6. Which utility can be used to move deployment packages across servers;
+
+ a. Git   b. Junit c. SSH d. Remote Desktop connection.
+
+ SSH
+
+7. How is system testing different from unit testing and Integration testing?
+
+system testing-where system is tested based on acceptance criteria given by user
+whereas in unit and integration testing functionality of each individual unit and integration of all units is tested.
+8. What are the some of the metrics that are measured/evaluated during a performance testing phase?
+response time,stress,volume handling capacity 
+
+9. What is meant by Regression testing?
+  testing to ensure the stable working condition of an existing system even after the changes are made.
