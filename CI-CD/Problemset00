@@ -1,0 +1,40 @@
+a.What is an Environment.
+collection of hardware and software that allows to build,test and deploy.
+b.Name different Environment used in Cigna.
+Development
+Testing
+Production
+c.Does different Environment differ. (yes/no with explanation)
+No.Similar kind of environment is needed.The product developed in particular environment has to be tested in the similar kind of environment to know or analyse its functionality and working condition.
+d.Kind’s of test based environment we use in Cigna.
+Unit
+Integration
+System
+User Acceptance test
+Performance
+Maintainance
+e.What is CI.
+It is a development practice where devolopers integrate their codes in a single shared repository.Each check-in is then verified by an automated build,allowing teams to detect conflicts easily.
+f.What is CD.
+releasing software with greater speed and frequency for frequent delivery.
+g.How CI/CD fits in Agile.
+-As in agile there has to be a continuos delivery within a small duration of time
+-to achieve sprint outcome 
+h.What do we mean by building and packaging
+building-It is a process to compile all of the source code for the project into a set of executable binaries.
+ Building incorporates compiling, linking and packaging the code into a usable or executable form
+packaging-a file (war file,jar file,.txt)
+i.What is an artifact.
+-that describes the function, architecture, and design of software
+-process of development-project plans, business cases, and risk assessments
+j.Name some build tools.
+ Build tools are programs that automate the creation of executable applications from source code
+Shell Scripts
+Make
+Gradle
+Apache Ant
+Maven
+Rake
+Grunt
+Gulp
+SBT
