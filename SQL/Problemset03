@@ -1,0 +1,248 @@
+
+
+
+1)What are the most important sql commands
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+
+2)What is an Entity,Attribute,Record,operator
+ENTITY-An entity can be a real-world object, that can be easily identifiable
+ATTRIBUTE-information about entity
+-An attribute is a characteristic of an entity object or view object
+-an attribute equates to a field in a record.
+RECORD-Data is stored in records. A record is composed of fields and contains all the data about one particular person, company, or item in a database
+FIELD-A field is part of a record and contains a single piece of data for the subject of the record
+OPERATOR-manipulates individual data items and returns a result
+-Operators are represented by special characters or by keywords.
+
+3)Why is it essential to select columns in a resultset instead of doing a select *.What is the use of distinct
+DISTINCT
+Specifies that only unique rows can appear in the result set. Null values are considered equal for the purposes of the DISTINCT keyword.
+SELECT columns-Describes only the columns that will be included in the result set(helps in selecting only the required columns to be in the result set).
+SELECt *-gives all the columns.Specifies that duplicate rows can appear in the result set. ALL is the default.fetching time is high.
+
+
+4)What is the difference between Where and Having
+WHERE-
+The WHERE clause is used to filter the rows in the table so that only those rows that match the search condition are included in the result set. If you omit the WHERE clause, all of the rows in the table are included.
+The search condition of a WHERE clause consists of one or more Boolean expressions, or predicates, that result in a value of True, False, or Unknown. If the combination of all the expressions is True, the row being tested is included in the result set. Otherwise, it's not.
+HAVING-
+Specifies a search condition for a group or an aggregate. HAVING can be used only with the SELECT statement. HAVING is typically used with a GROUP BY clause.
+
+
+5)What are the different operators used in Where.difference between And not and OR
+Arithmetic operators-+,-,*,/,%
+Comparison operators-=,<,>,<=,>=,!=,<>
+Logical operators-ALL(compare a value to all values in another value set),AND,OR,IN,IS NULL,LIKE,EXISTS,BETWEEN
+Operators used to negate conditions-NOT
+
+AND-The AND operator allows the existence of multiple conditions in an SQL statement's WHERE clause and returns when all the conditions are met.
+ANY-The ANY operator is used to compare a value to any applicable value in the list as per the condition.
+OR-The OR operator is used to combine multiple conditions in an SQL statement's WHERE clause and returns if any one condition is true.
+NOT-The NOT operator reverses the meaning of the logical operator with which it is used. Eg: NOT EXISTS, NOT BETWEEN, NOT IN, etc. This is a negate operator.
+
+6)what is the difference between Group by and order by when do we use them
+ORDER BY-Specifies how the rows in the result set will be sorted.
+If you include the ORDER BY clause, the rows in the result set are sorted in the specified sequence(ASEC/DESC).
+GROUP BY-
+A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group
+
+7)What is an aggregate function.Specify the different types of aggregate functions
+
+Aggregate Functions are all about Performing  calculations on multiple rows Of a single column of a table And returning a single value.All aggregate functions by default exclude nulls values before working on the data.
+Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
+1) COUNT
+2) SUM
+3) AVG
+4) MIN
+5) MAX
+
+8)What is a constraint.What is a primary key,Foreign key?Why do we use them
+Constraints are the rules enforced on the data columns of a table. These are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the database.
+Primary key-Uniquely identifies each row/record in a database table.A table can have only one primary key, which may consist of single or multiple fields. When multiple fields are used as a primary key, they are called a composite key
+Foreign key-A foreign key is a key used to link two tables together. This is sometimes also called as a referencing key.A Foreign Key is a column or a combination of columns whose values match a Primary Key in a different table.
+
+9)What is an index?Why do we use indexing?
+An index is used to speed up the performance of queries(helps speed up the retrieval of data from tables).
+
+10)What is an view.
+ A view is a virtual table that consists of columns from one or more tables. Though it is similar to a table, it is not stored in the database. It is a query stored as an object
+ -views are definitions built on top of other tables (or views), and do not hold data themselves. If data is changing in the underlying table, the same change is reflected in the view
+ -can be created by using CREATE view command
+uses-Security,Consistency,Space
+demerits-performance,Modifications
+
+11)Specify the different type of joins with an example?
+ Joins clause is used to combine records from two or more tables in a database. A JOIN is a means for combining fields from two tables by using values common to each.
+Consider the following two tables −
+
+Table 1 − CUSTOMERS Table
+
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
+|  2 | Khilan   |  25 | Delhi     |  1500.00 |
+|  3 | kaushik  |  23 | Kota      |  2000.00 |
+|  4 | Chaitali |  25 | Mumbai    |  6500.00 |
+|  5 | Hardik   |  27 | Bhopal    |  8500.00 |
+|  6 | Komal    |  22 | MP        |  4500.00 |
+|  7 | Muffy    |  24 | Indore    | 10000.00 |
++----+----------+-----+-----------+----------+
+Table 2 − ORDERS Table
+
++-----+---------------------+-------------+--------+
+|OID  | DATE                | CUSTOMER_ID | AMOUNT |
++-----+---------------------+-------------+--------+
+| 102 | 2009-10-08 00:00:00 |           3 |   3000 |
+| 100 | 2009-10-08 00:00:00 |           3 |   1500 |
+| 101 | 2009-11-20 00:00:00 |           2 |   1560 |
+| 103 | 2008-05-20 00:00:00 |           4 |   2060 |
++-----+---------------------+-------------+--------+
+Now, let us join these two tables in our SELECT statement as shown below.
+INNER JOIN-
+SQL> SELECT ID, NAME, AGE, AMOUNT
+   FROM CUSTOMERS, ORDERS
+   WHERE  CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+This would produce the following result.
+
++----+----------+-----+--------+
+| ID | NAME     | AGE | AMOUNT |
++----+----------+-----+--------+
+|  3 | kaushik  |  23 |   3000 |
+|  3 | kaushik  |  23 |   1500 |
+|  2 | Khilan   |  25 |   1560 |
+|  4 | Chaitali |  25 |   2060 |
++----+----------+-----+--------+
+LEFT OUTER JOIN-
+SQL> SELECT  ID, NAME, AMOUNT, DATE
+   FROM CUSTOMERS
+   LEFT JOIN ORDERS
+   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+This would produce the following result −
+
++----+----------+--------+---------------------+
+| ID | NAME     | AMOUNT | DATE                |
++----+----------+--------+---------------------+
+|  1 | Ramesh   |   NULL | NULL                |
+|  2 | Khilan   |   1560 | 2009-11-20 00:00:00 |
+|  3 | kaushik  |   3000 | 2009-10-08 00:00:00 |
+|  3 | kaushik  |   1500 | 2009-10-08 00:00:00 |
+|  4 | Chaitali |   2060 | 2008-05-20 00:00:00 |
+|  5 | Hardik   |   NULL | NULL                |
+|  6 | Komal    |   NULL | NULL                |
+|  7 | Muffy    |   NULL | NULL                |
++----+----------+--------+---------------------+
+RIGHT OUTER JOIN-
+SQL> SELECT  ID, NAME, AMOUNT, DATE
+   FROM CUSTOMERS
+   RIGHT JOIN ORDERS
+   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+This would produce the following result −
+
++------+----------+--------+---------------------+
+| ID   | NAME     | AMOUNT | DATE                |
++------+----------+--------+---------------------+
+|    3 | kaushik  |   3000 | 2009-10-08 00:00:00 |
+|    3 | kaushik  |   1500 | 2009-10-08 00:00:00 |
+|    2 | Khilan   |   1560 | 2009-11-20 00:00:00 |
+|    4 | Chaitali |   2060 | 2008-05-20 00:00:00 |
++------+----------+--------+---------------------+
+SELF JOIN
+SQL> SELECT  a.ID, b.NAME, a.SALARY
+   FROM CUSTOMERS a, CUSTOMERS b
+   WHERE a.SALARY < b.SALARY;
++----+----------+---------+
+| ID | NAME     | SALARY  |
++----+----------+---------+
+|  2 | Ramesh   | 1500.00 |
+|  2 | kaushik  | 1500.00 |
+|  1 | Chaitali | 2000.00 |
+|  2 | Chaitali | 1500.00 |
+|  3 | Chaitali | 2000.00 |
+|  6 | Chaitali | 4500.00 |
+|  1 | Hardik   | 2000.00 |
+|  2 | Hardik   | 1500.00 |
+|  3 | Hardik   | 2000.00 |
+|  4 | Hardik   | 6500.00 |
+|  6 | Hardik   | 4500.00 |
+|  1 | Komal    | 2000.00 |
+|  2 | Komal    | 1500.00 |
+|  3 | Komal    | 2000.00 |
+|  1 | Muffy    | 2000.00 |
+|  2 | Muffy    | 1500.00 |
+|  3 | Muffy    | 2000.00 |
+|  4 | Muffy    | 6500.00 |
+|  5 | Muffy    | 8500.00 |
+|  6 | Muffy    | 4500.00 |
++----+----------+---------+
+FULL JOIN
+SQL> SELECT  ID, NAME, AMOUNT, DATE
+   FROM CUSTOMERS
+   FULL JOIN ORDERS
+   ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+This would produce the following result −
+
++------+----------+--------+---------------------+
+| ID   | NAME     | AMOUNT | DATE                |
++------+----------+--------+---------------------+
+|    1 | Ramesh   |   NULL | NULL                |
+|    2 | Khilan   |   1560 | 2009-11-20 00:00:00 |
+|    3 | kaushik  |   3000 | 2009-10-08 00:00:00 |
+|    3 | kaushik  |   1500 | 2009-10-08 00:00:00 |
+|    4 | Chaitali |   2060 | 2008-05-20 00:00:00 |
+|    5 | Hardik   |   NULL | NULL                |
+|    6 | Komal    |   NULL | NULL                |
+|    7 | Muffy    |   NULL | NULL                |
+|    3 | kaushik  |   3000 | 2009-10-08 00:00:00 |
+|    3 | kaushik  |   1500 | 2009-10-08 00:00:00 |
+|    2 | Khilan   |   1560 | 2009-11-20 00:00:00 |
+|    4 | Chaitali |   2060 | 2008-05-20 00:00:00 |
++------+----------+--------+---------------------+
+CARTESIAN JOIN-
+SQL> SELECT  ID, NAME, AMOUNT, DATE
+   FROM CUSTOMERS, ORDERS;
+This would produce the following result −
+
++----+----------+--------+---------------------+
+| ID | NAME     | AMOUNT | DATE                |
++----+----------+--------+---------------------+
+|  1 | Ramesh   |   3000 | 2009-10-08 00:00:00 |
+|  1 | Ramesh   |   1500 | 2009-10-08 00:00:00 |
+|  1 | Ramesh   |   1560 | 2009-11-20 00:00:00 |
+|  1 | Ramesh   |   2060 | 2008-05-20 00:00:00 |
+|  2 | Khilan   |   3000 | 2009-10-08 00:00:00 |
+|  2 | Khilan   |   1500 | 2009-10-08 00:00:00 |
+|  2 | Khilan   |   1560 | 2009-11-20 00:00:00 |
+|  2 | Khilan   |   2060 | 2008-05-20 00:00:00 |
+|  3 | kaushik  |   3000 | 2009-10-08 00:00:00 |
+|  3 | kaushik  |   1500 | 2009-10-08 00:00:00 |
+|  3 | kaushik  |   1560 | 2009-11-20 00:00:00 |
+|  3 | kaushik  |   2060 | 2008-05-20 00:00:00 |
+|  4 | Chaitali |   3000 | 2009-10-08 00:00:00 |
+|  4 | Chaitali |   1500 | 2009-10-08 00:00:00 |
+|  4 | Chaitali |   1560 | 2009-11-20 00:00:00 |
+|  4 | Chaitali |   2060 | 2008-05-20 00:00:00 |
+|  5 | Hardik   |   3000 | 2009-10-08 00:00:00 |
+|  5 | Hardik   |   1500 | 2009-10-08 00:00:00 |
+|  5 | Hardik   |   1560 | 2009-11-20 00:00:00 |
+|  5 | Hardik   |   2060 | 2008-05-20 00:00:00 |
+|  6 | Komal    |   3000 | 2009-10-08 00:00:00 |
+|  6 | Komal    |   1500 | 2009-10-08 00:00:00 |
+|  6 | Komal    |   1560 | 2009-11-20 00:00:00 |
+|  6 | Komal    |   2060 | 2008-05-20 00:00:00 |
+|  7 | Muffy    |   3000 | 2009-10-08 00:00:00 |
+|  7 | Muffy    |   1500 | 2009-10-08 00:00:00 |
+|  7 | Muffy    |   1560 | 2009-11-20 00:00:00 |
+|  7 | Muffy    |   2060 | 2008-05-20 00:00:00 |
++----+----------+--------+---------------------+
