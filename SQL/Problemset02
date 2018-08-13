@@ -27,10 +27,10 @@ OPERATOR-manipulates individual data items and returns a result
 -Operators are represented by special characters or by keywords.
 
 3)Why is it essential to select columns in a resultset instead of doing a select *.What is the use of distinct
-DISTINCT
+DISTINCT-to eliminate duplicates
 Specifies that only unique rows can appear in the result set. Null values are considered equal for the purposes of the DISTINCT keyword.
 SELECT columns-Describes only the columns that will be included in the result set(helps in selecting only the required columns to be in the result set).
-SELECt *-gives all the columns.Specifies that duplicate rows can appear in the result set. ALL is the default.fetching time is high.
+SELECt *-complexity,performance.gives all the columns.Specifies that duplicate rows can appear in the result set. ALL is the default.fetching time is high.
 
 
 4)What is the difference between Where and Having
