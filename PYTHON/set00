@@ -1,0 +1,252 @@
+"""
+repl.it
+
+
+a=12
+b=52
+c=a+b
+print c
+
+d=input("value")
+e=input("value")
+f=e+d
+print(d)
+print(e)
+print(d+e)
+print(d-e)
+print(d*e)
+print(d/e)
+print(d%e)
+print(d**e)
+print(type(d))
+print(type(e))
+
+
+
+1)firstname=input("enter the first name: ")
+lastname=input("enter the last name: ")
+print("name is "+firstname+" "+lastname)
+
+
+4)a=input("value a")
+b=input("value b")
+c=input("value c")
+if(a==b or b==c or c==a):
+	sum=0
+	print(sum)
+else:
+	sum=a+b+c
+	print("sum of integers is "+str(sum)
+
+	
+val=input("enter value")
+l=len(val)
+x=0
+while(l<x):
+	a=val[l]
+	b=val[l-1]
+	c=int(a)+int(b)
+	x+=1
+print(c)	
+
+2)name="Jayasri Ganesh"
+first_name=name[0:7]
+second_name=name[8:14]
+print("first name is "+first_name)
+print("second name is "+second_name)
+age=22
+print("age is %s"%age)
+
+a="hello world"
+b=a[0:3]
+c=a[-8:-2]
+d=a.upper()
+e=a.lower()
+f=len(a)
+g=a.split(" ")
+h=a.replace("o","i")
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+print(g)
+print(h)
+
+--------------
+var1 = 'Hello World!'
+ print "Updated String :- ", var1[:4] + 'Python'
+Updated String :-  HellPython
+
+ a.center(60, ' ')
+'                        hello world                         '
+
+
+a=[]
+type(a) --- list type
+
+-----------------------
+a=5
+b=10
+if a>b:
+	print("a is greater")
+else:
+	print("b is greater")
+
+-----------------
+
+a=20
+b=200
+if(a>b):
+	if(a>0):
+		print("a is greater")
+else:
+	print("b is greater")
+----------------------
+a=input("enter value")
+if a==0:
+ print("equal")
+elif a>0:
+	print("positive")
+else:
+	print("negative")
+---------------------
+
+a=5
+b=[1,2,5]
+if a in b:
+ print("matched")
+else:
+	print("not matched")
+
+a='h'
+b=['hello']
+if a in b:
+ print("matched")
+else:
+	print("not matched")
+------------------------------
+
+a=''
+
+if not a:
+	print("value not found")
+else:
+	print("value found")
+	
+value not found
+-------------------
+a=[1,2,3,4,5]
+for i in a:
+	if(i<10):
+		print(i)
+		j=5
+print(i)
+
+1
+2
+3
+4
+5
+5
+
+--------------
+a=[1,2,3,4,5]
+for i in a:
+	if(i<10):
+		print(i)
+		j=5
+print(i)
+print(j)
+ 
+ j not defined
+ 
+------------------
+
+a="07/08/1996"
+l=a.split("/")
+print(l)
+['07', '08', '1996']
+_________________________
+l=range(100)
+a=[]
+b=[]
+for i in l:
+    if(i%2==0):
+        a.append(i)
+    else:
+        b.append(i)
+print(a)
+print(b)
+__________________________________
+
+l=range(100)
+a=l[::2]
+b=l[::1]
+-------------
+
+l=range(100)
+a=[]
+b=[]
+i=1
+while(i<len(l)):
+  if(i%2==0):
+    a.append(i)
+  else:
+    b.append(i)
+  i+=1
+print(a)
+print(b)
+-------------------------
+CASTING
+a=[1,2,3]
+b=tuple(a)
+print(b)
+c=list(b)
+print(c)
+
+(1, 2, 3)
+[1, 2, 3] 
+
+
+a="hello"
+b=list(a)
+print(b)
+c=''.join(b)
+print(c)
+
+['h', 'e', 'l', 'l', 'o']
+hello
+
+---------------------
+SET FUNCTIONS
+
+l=[1,2,3,4,5,1,2,5]
+k=set(l)
+print(k)
+m=list(k)
+set([1, 2, 3, 4, 5])
+
+
+l=[4,5,6]
+m=[5,6]
+#k=set(l)-set(m)
+k=set(l).difference(set(m))
+x=set(l).union(set(m))
+y=set(l).intersection(set(m))
+z=set(l).issubset(set(m))
+a=set(l).issuperset(set(m))
+print(k) #4
+print(x)
+print(y)
+print(z)
+print(a)
+
+set([4])
+set([4, 5, 6])
+set([5, 6])
+False
+True
+--------------------
+"""
