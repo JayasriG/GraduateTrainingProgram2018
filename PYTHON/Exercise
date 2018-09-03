@@ -1,0 +1,298 @@
+repl.it
+
+
+a=12
+b=52
+c=a+b
+print c
+
+d=input("value")
+e=input("value")
+f=e+d
+print(d)
+print(e)
+print(d+e)
+print(d-e)
+print(d*e)
+print(d/e)
+print(d%e)
+print(d**e)
+print(type(d))
+print(type(e))
+
+a="hello world"
+b=a[0:3]
+c=a[-8:-2]
+d=a.upper()
+e=a.lower()
+f=len(a)
+g=a.split(" ")
+h=a.replace("o","i")
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+print(g)
+print(h)
+
+--------------
+var1 = 'Hello World!'
+ print "Updated String :- ", var1[:4] + 'Python'
+Updated String :-  HellPython
+
+ a.center(60, ' ')
+'                        hello world                         '
+
+
+a=[]
+type(a) --- list type
+
+-----------------------
+a=5
+b=10
+if a>b:
+	print("a is greater")
+else:
+	print("b is greater")
+
+-----------------
+
+a=20
+b=200
+if(a>b):
+	if(a>0):
+		print("a is greater")
+else:
+	print("b is greater")
+----------------------
+a=input("enter value")
+if a==0:
+ print("equal")
+elif a>0:
+	print("positive")
+else:
+	print("negative")
+---------------------
+
+a=5
+b=[1,2,5]
+if a in b:
+ print("matched")
+else:
+	print("not matched")
+
+a='h'
+b=['hello']
+if a in b:
+ print("matched")
+else:
+	print("not matched")
+------------------------------
+
+a=''
+
+if not a:
+	print("value not found")
+else:
+	print("value found")
+	
+value not found
+-------------------
+a=[1,2,3,4,5]
+for i in a:
+	if(i<10):
+		print(i)
+		j=5
+print(i)
+
+1
+2
+3
+4
+5
+5
+
+--------------
+a=[1,2,3,4,5]
+for i in a:
+	if(i<10):
+		print(i)
+		j=5
+print(i)
+print(j)
+ 
+ j not defined
+ 
+------------------
+
+a="07/08/1996"
+l=a.split("/")
+print(l)
+['07', '08', '1996']
+_________________________
+l=range(100)
+a=[]
+b=[]
+for i in l:
+    if(i%2==0):
+        a.append(i)
+    else:
+        b.append(i)
+print(a)
+print(b)
+__________________________________
+
+l=range(100)
+a=l[::2]
+b=l[::1]
+-------------
+
+l=range(100)
+a=[]
+b=[]
+i=1
+while(i<len(l)):
+  if(i%2==0):
+    a.append(i)
+  else:
+    b.append(i)
+  i+=1
+print(a)
+print(b)
+-------------------------
+CASTING
+a=[1,2,3]
+b=tuple(a)
+print(b)
+c=list(b)
+print(c)
+
+(1, 2, 3)
+[1, 2, 3] 
+
+
+a="hello"
+b=list(a)
+print(b)
+c=''.join(b)
+print(c)
+
+['h', 'e', 'l', 'l', 'o']
+hello
+
+---------------------
+SET FUNCTIONS
+
+l=[1,2,3,4,5,1,2,5]
+k=set(l)
+print(k)
+m=list(k)
+set([1, 2, 3, 4, 5])
+
+
+l=[4,5,6]
+m=[5,6]
+#k=set(l)-set(m)
+k=set(l).difference(set(m))
+x=set(l).union(set(m))
+y=set(l).intersection(set(m))
+z=set(l).issubset(set(m))
+a=set(l).issuperset(set(m))
+print(k) #4
+print(x)
+print(y)
+print(z)
+print(a)
+
+set([4])
+set([4, 5, 6])
+set([5, 6])
+False
+True
+____________________________
+dictionary
+
+d={}
+print(d)
+print(type(d))
+d={1:2}
+print(d)
+d[5]=6
+print(d){1: 2, 5: 6}
+d[5]=7
+print(d){1: 2, 5: 7}
+del d[5]
+print(d)
+d['a']=[1,2,3,4,5]
+print(d) /{1: 2, 'a': [1, 2, 3, 4, 5]}
+print(d['a'][2]  /3
+
+
+d={}
+print(d)
+d['marks']=[1,2,3]
+d['marks'][2]=50
+print(d) /{'marks': [1, 2, 50]}
+d['marks'].append(60) /{'marks': [1, 2, 50, 60]}
+print(d)
+
+
+d={1:'a',2:'b',3:'c'}
+for k,v in d.iteritems():
+ print(k,v) // (1, 'a')
+				(2, 'b')
+				(3, 'c')
+ print(k,d[k])
+print(d.keys())  /[1, 2, 3]
+d={1:'a',2:'b',3:'c'}  /['a', 'b', 'c']
+
+d={1:'a',2:'b',3:'c'}
+for k in d.keys():
+  print(k,d[k])
+(1, 'a')
+(2, 'b')
+(3, 'c')
+
+NESTED DICT
+e={'name':'jay','skill_set':{'python':50,'agile':20,'teradata':'30'}}
+print(e) /{'skill_set': {'python': 50, 'agile': 20, 'teradata': '30'}, 'name': 'jay'}
+for k in e.keys():
+  print(k,e[k]) /('skill_set', {'python': 50, 'agile': 20, 'teradata': '30'})
+                 ('name', 'jay')
+for k,v in e['skill_set'].iteritems():
+  print(k,v) /  ('python', 50)
+				('agile', 20)
+				('teradata', '30')
+				
+e={'name':'jay','skill_set':{'python':50,'agile':20,'teradata':'30'}}
+print(e)
+for k,em in e.iteritems():
+  print(k,em)
+  if isinstance(em,dict):
+    for key_n,val_n in em.iteritems():
+      print(key_n,val_n)
+answer:
+{'skill_set': {'python': 50, 'agile': 20, 'teradata': '30'}, 'name': 'jay'}
+('skill_set', {'python': 50, 'agile': 20, 'teradata': '30'})
+('python', 50)
+('agile', 20)
+('teradata', '30')
+('name', 'jay')
+
+
+e={'name':'jay','skill_set':['python','agile','teradata']}
+print(e)
+for k,em in e.iteritems():
+  print(k,em)
+  if isinstance(em,list): or if type(em)==list:
+    for a in em:
+      print(a)
+answer:
+{'skill_set': ['python', 'agile', 'teradata'], 'name': 'jay'}
+('skill_set', ['python', 'agile', 'teradata'])
+python
+agile
+teradata
+('name', 'jay')
