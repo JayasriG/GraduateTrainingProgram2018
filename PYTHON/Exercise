@@ -37,6 +37,93 @@ print(f)
 print(g)
 print(h)
 
+
+ a.append(5)
+>>> a
+[5]
+>>> type(a)
+<type 'list'>
+>>> a.append("5")
+>>> a
+[5, '5']
+>>> b=[]
+>>> b=[1,'a']
+a.append(b)
+>>> a
+[5, '5', [1, 'a']]
+a.extend([1,2,'b'])
+>>> a
+[5, '5', [1, 'a'], 1, 2, 'b']
+
+ a.append(b)
+>>> a
+[5, '5', [1, 'a'], 1, 2, 'b', [1, 'a']]
+a.count([1,'a'])
+2
+
+a.count([1,'a'])
+2
+>>> a.index(1)
+3
+>>> a.index([1,'a'])
+2
+
+a.insert(0,'a')
+>>> a
+['a', 5, '5', [1, 'a'], 1, 2, 'b', [1, 'a']]
+
+ a.pop(1)
+5
+>>> a
+['a', '5', [1, 'a'], 1, 2, 'b', [1, 'a']]
+>>> a.remove('a')
+>>> a
+['5', [1, 'a'], 1, 2, 'b', [1, 'a']]
+>>> del a[0]
+>>> a
+[[1, 'a'], 1, 2, 'b', [1, 'a']]
+
+ a=[1,'a',3]
+ a.sort()
+ a
+[1, 3, 'a']
+>>> a.reverse()
+>>> a
+['a', 3, 1]
+
+ a=[1,2,3,4,[1,2],7,9]
+min(a)
+1
+>>> max(a)
+[1, 2]
+>>> a[2]
+3
+a[4][1]
+2
+ TUPLE:
+a=(1,'a',2)
+>>> type(a)
+<type 'tuple'>
+ a="I don't like coffee"
+>>> a.split()
+['I', "don't", 'like', 'coffee']
+>>> l=a.split()
+>>> l
+['I', "don't", 'like', 'coffee']
+>>> type(l)
+<type 'list'>
+>>> type(a)
+<type 'str'>
+ b=' '.join(l)
+>>> b
+"I don't like coffee"
+>>> b='* '.join(l)
+>>> b
+"I* don't* like* coffee"
+
+
+               
+
 --------------
 var1 = 'Hello World!'
  print "Updated String :- ", var1[:4] + 'Python'
