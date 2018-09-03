@@ -1,0 +1,20 @@
+def add(a,b):
+  c=0
+  c=a+b
+  return c,a,b
+def sub(a,b):
+  c=0
+  c=a-b
+  print c
+def add_fn():
+  c=a+b
+  print(c)   
+
+a=10
+b=5
+add_fn()
+i=input("enter 1st value:")
+j=input("enter 2nd value:")
+k1,k2,k3=add(i,j)
+sub(i,j)
+print("out1-",k1,"out2-",k2,"out3-",k3)
