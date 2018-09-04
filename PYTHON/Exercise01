@@ -89,3 +89,28 @@ def add_fn(a,b):
 a=4
 b=6
 add_fn(a,b)
+
+-----------
+ import name1
+def add_fn(a,b):
+  try:
+    c=a+b
+    print(c)
+  except Exception as error:
+    print(error)
+  finally:
+    print("final block")
+
+if __name__=="__main__":
+	a=4
+	b=6
+	add_fn(a,b)
+	d=name1.sub_fn(5,3)
+	print(d)
+
+------
+name1.py
+
+def sub_fn(a,b):
+	c=a-b
+	return c
