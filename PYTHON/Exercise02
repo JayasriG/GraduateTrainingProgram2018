@@ -1,0 +1,79 @@
+	
+class shapes:
+  def circle(self,a):
+    try:
+      if(a>0):
+        self.c=pi*a*a
+        return self.c
+      else:
+        return 0
+    except Exception as error:
+      print("enter correct input")
+      return 0
+  def rect(self,l,b):
+    try:
+      if(l>0 and b>0):
+        c=l*b
+        return c
+      else:
+        return 0
+    except Exception as error:
+      print("pass correct args")
+      return 0
+if __name__=="__main__":
+  obj=shapes()
+  pi=3.14
+  res1=obj.circle("5")
+  print("area of circle is:%s"%res1)
+  res2=obj.rect(4,-5)
+  print("area of rect is :%s"%res2)
+
+answer:
+enter correct input
+area of circle is:0
+area of rect is :0
+
+
+
+class shapes:
+  def __init__(self,r,l,b, pi):
+    self.r=r
+    self.l=l
+    self.b=b
+    self.pi = pi
+    self.c=self.circle()
+    c= self.c
+    print("came here %s"%c)
+    self.rect()
+  def circle(self):
+    try:
+      a=self.r
+      c=self.pi*a*a
+      return c
+    except Exception as error:
+      print(error)
+      print("enter correct input")
+      return 0
+  def rect(self):
+    try:
+      l=self.l
+      b=self.b
+      if(l>0 and b>0):
+        c=l*b
+        print("area of circle is:%s"%c)
+      else:
+        return 0
+    except Exception as error:
+      print("pass correct args")
+      return 0
+if __name__=="__main__":
+  obj=shapes(5,2,3,3.14)
+  print(dir(obj))
+  print("printing "+str(obj.c))
+  
+  
+Answer:
+came here 78.5
+area of circle is:6
+['__doc__', '__init__', '__module__', 'b', 'c', 'circle', 'l', 'pi', 'r', 'rect']
+printing 78.5
