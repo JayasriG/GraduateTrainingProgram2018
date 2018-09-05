@@ -1,0 +1,249 @@
+You are asked to ensure that the first and last names of people begin with a capital letter in their passports. For example, alison heck should be capitalised correctly as Alison Heck.
+
+alison heck => Alison Heck
+
+Given a full name, your task is to capitalize the name appropriately.
+
+Input Format:-
+
+A single line of input containing the full name, S .
+
+Constraints:-
+
+* 0<len(S)<1000
+* The string consists of alphanumeric characters and spaces.
+
+Note: in a word only the first character is capitalized. Example 12abc when capitalized remains 12abc.
+
+Output Format:-
+
+Print the capitalized string, S .
+
+Sample Input
+------------
+chris alan
+
+Sample Output
+-------------
+Chris Alan
+
+
+-----  
+name=raw_input("enter name:")
+try:
+  if(l<1000 and l>0):
+    s=name.split(" ")
+    l=len(name)
+    a=[]
+    for i in s:
+      if i.isalnum()==True:
+        a.append(i.capitalize())
+    print(" ".join(a))
+except Exception as error:
+  print(error)
+
+----    name=input("enter name:")
+	s=name.split(" ")
+	l=len(name)
+	a=[]
+	if(l<1000 and name.isalnum()=='True')
+		for i in s:
+			a.append(i.capitalize())
+			print(" ".join(a))
+
+
+
+2)Consider a list (list = []). You can perform the following commands:
+
+insert i e: Insert integer e at position i.
+print: Print the list.
+remove e: Delete the first occurrence of integer e.
+append e: Insert integer e at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+
+Initialize your list and read in the value of  followed by  lines of commands where each command will be of the 7 types listed above. Iterate through each command in order and perform the corresponding operation on your list.
+
+Input Format:-
+
+The first line contains an integer, n , denoting the number of commands. 
+Each line i of the n  subsequent lines contains one of the commands described above.
+
+Constraints:-
+
+* The elements added to the list must be integers.
+
+Output Format:-
+
+For each command of type print, print the list on a new line.
+
+Sample Input
+------------
+
+12
+insert 0 5
+insert 1 10
+insert 0 6
+print
+remove 6
+append 9
+append 1
+sort
+print
+pop
+reverse
+print
+
+Sample Output
+-------------
+
+[6, 5, 10]
+[1, 5, 9, 10]
+[9, 5, 1]
+
+l=[]
+cnt=input("enter no of operations:")
+i=0
+while i<cnt:
+	operation=input("enter the type of operation:")
+	if(operation=="insert"):
+		p=input("give position:")
+		e=input("enter the value:")
+		l.insert(p,e)
+	if(operation=="print"):
+		print(l)
+	if(operation=="remove"):
+		e=input("enter the value to be removed:")
+		try:
+			l.remove(e)
+		except Exception as error:
+			print(error)
+	if(operation=="append"):
+		value=input("enter the value to be appended:")
+		l.append(value)	
+	if(operation=="sort"):
+		l.sort()
+	if(operation=="reverse"):
+		l[::-1]
+	i=i+1
+
+
+
+3)You have a record of  students. Each record contains the student's name, and their percent marks in Maths, Physics and Chemistry. The marks can be floating values. The user enters some integer  followed by the names and marks for students. You are required to save the record in a dictionary data type. The user then enters a student's name. Output the average percentage marks obtained by that student, correct to two decimal places.
+
+Input Format:-
+
+The first line contains the integer N, the number of students. The next  lines contains the name and marks obtained by that student separated by a space. The final line contains the name of a particular student previously listed.
+
+Constraints:-
+
+* 2<=N<=10
+* 0<=MARKS<=100
+
+Output Format:-
+
+Print one line: The average of the marks obtained by the particular student correct to 2 decimal places.
+
+Sample Input 1
+--------------
+
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+
+Sample Output 1
+---------------
+
+56.00
+
+
+Sample Input 2
+--------------
+
+2
+Harsh 25 26.5 28
+Anurag 26 28 30
+Harsh
+
+Sample Output 2
+---------------
+
+26.50
+
+try:
+  c=input("enter the student count:")
+  stu_dict={}
+  for i in range(c):
+	  mark=[]
+	  values=raw_input("enter name and marks:")
+	  m=values.split(" ")
+	  key=m.pop(0)
+	  for j in range(len(m)):
+	    mark.append(int(m[j])
+		  stu_dict[key]=mark
+  fetch=raw_input("enter the student name for average:")
+  avg=sum(stu_dict[fetch])/len(stu_dict[fetch])
+  print (avg)
+except Exception as error:
+  print("enter valid count")
+
+
+
+4)Exceptions
+----------
+Errors detected during execution are called exceptions.
+
+Examples:
+
+ZeroDivisionError 
+This error is raised when the second argument of a division or modulo operation is zero.
+
+>>> a = '1'
+>>> b = '0'
+>>> print int(a) / int(b)
+>>> ZeroDivisionError: integer division or modulo by zero
+ValueError 
+This error is raised when a built-in operation or function receives an argument that has the right type but an inappropriate value.
+
+>>> a = '1'
+>>> b = '#'
+>>> print int(a) / int(b)
+>>> ValueError: invalid literal for int() with base 10: '#'
+
+
+Handling Exceptions:-
+The statements try and except can be used to handle selected exceptions. A try statement may have more than one except clause to specify handlers for different exceptions.
+
+
+Task:-
+
+You are given two values a and b . 
+Perform integer division and print a/b .
+
+Input Format:-
+
+The first line contains T , the number of test cases. 
+The next T lines each contain the space separated values of a and b .
+
+Constraints:-
+* 0 < T < 10
+
+Output Format
+
+Print the value of . 
+In the case of ZeroDivisionError or ValueError, print the error code.
+
+Sample Input
+
+3
+1 0
+2 $
+3 1
+Sample Output
+
+Error Code: integer division or modulo by zero
+Error Code: invalid literal for int() with base 10: '$'
+3
