@@ -1,0 +1,19 @@
+class abc:
+  def __init__(self):
+    print("in init")
+  def fn1(self):
+    print("fn1")
+class xyz(abc):
+  def __init__(self):
+    print("xyz inint")
+    abc.__init__(self)
+    #super.__init__(self)
+  def fn1(self):
+    print("xyz fn1")
+obj=xyz()
+obj.fn1()
+
+Answer:
+xyz inint
+in init
+xyz fn1
