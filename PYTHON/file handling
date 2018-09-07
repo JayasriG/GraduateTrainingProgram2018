@@ -1,0 +1,18 @@
+f=open("hello.txt",'r')
+print(dir(f))
+print(f.read())
+f.seek(0)
+print(f.readlines())
+print(f.read(5))
+f.close()
+
+Answer:
+dir fnsss
+hi hello!!!
+python file handling
+['hi hello!!!\n', 'python file handling']
+
+
+lambda:
+s=lambda a,b,c,d:(a+b)
+`print(s(1,2,3,4)) //3
