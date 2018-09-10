@@ -1,0 +1,48 @@
+import sqlite3
+conn = sqlite3.connect('C:/Users/training_c2d.02.11/Desktop/python/samples.db')
+c = conn.cursor()
+
+class Student:
+	def create():
+		try:
+			c.execute('''CREATE TABLE student (name varchar(30),no int,sub1 varchar(30),sub2 varchar(30),sub3 varchar(30));''')
+		except Exception as error:
+			c.execute("DROP TABLE student")
+			create()
+
+	def insert():
+		num=input("no of records:")
+		for i in range(num):
+			value1=raw_input("enter values:")
+			value2=value1.split(" ")
+			value2=tuple(value2)
+			c.execute("INSERT INTO student VALUES (?,?,?,?,?);",value2)
+		c.execute("SELECT * FROM student;")
+		print c.fetchall()
+
+	def counting():
+		c.execute("SELECT count(no) FROM student;")
+		cnt=c.fetchall()
+		print "count of records is :%d"%cnt[0][0]
+
+	def update():
+		value1=raw_input("enter values to be updated:")
+		value2=value1.split(" ")
+		"""v1=value2[0]
+		v2=value2[0]
+		v3=value2[1]
+		#a=value2[0]"""
+		value2=tuple(value2)
+		c.execute("UPDATE STUDENT SET ?? where no=?",value2)
+		c.execute("SELECT * FROM student;")
+		print c.fetchall()
+	def delete():
+		c.execute("DELETE FROM 	student")
+	def drop():
+		c.execute("drop table student")
+obj=student()
+obj.create()
+obj.insert()
+obj.counting()
+obj.update()
+conn.commit()
