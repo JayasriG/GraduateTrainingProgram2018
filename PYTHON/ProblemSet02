@@ -129,6 +129,32 @@ while i<cnt:
 	i=i+1
 
 
+___
+dict={}
+l=[]
+n=input("Enter the no of commands")
+for i in range(n):
+      s=raw_input();
+      l1=s.split(" ")
+      dict[i]=l1
+for i in range(n):
+      if(dict[i][0]=="insert"):
+           l.insert(int(dict[i][1]),int(dict[i][2]))
+      elif(dict[i][0]=="print"):
+           print l
+      elif(dict[i][0]=="remove"):
+           l.remove(int(dict[i][1]))
+      elif(dict[i][0]=="append"):
+           l.append(int(dict[i][1]))
+      elif(dict[i][0]=="sort"):
+           l.sort()
+      elif(dict[i][0]=="pop"):
+           l.pop(len(l)-1)
+      elif(dict[i][0]=="reverse"):
+           l.reverse()
+          
+
+
 
 3)You have a record of  students. Each record contains the student's name, and their percent marks in Maths, Physics and Chemistry. The marks can be floating values. The user enters some integer  followed by the names and marks for students. You are required to save the record in a dictionary data type. The user then enters a student's name. Output the average percentage marks obtained by that student, correct to two decimal places.
 
