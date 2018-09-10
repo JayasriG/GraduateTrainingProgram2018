@@ -273,3 +273,20 @@ Sample Output
 Error Code: integer division or modulo by zero
 Error Code: invalid literal for int() with base 10: '$'
 3
+
+
+l=[]
+def case1():
+	try:
+		c=int(b[0])/int(b[1])
+		l.append(c)
+	except Exception as error:
+		l.append(error)
+t=input("enter test cases")
+for i in range(t):
+	a=raw_input("enter value")
+	b=a.split(" ")
+	d=case1()
+for i in l:
+	print i
+
