@@ -30,3 +30,9 @@ def check(lists):
 aa=lists(path)
 print "list of files:%s"%aa
 cnt(aa)
+
+
+Create a program that accepts two path arguments from the user and should be able to do the following.
+Create a function to copy all the file from first path to second path by appending each file name with current time stamp.
+Create a function to take the latest modified “.txt” file from the first path read it and create a file in second path with the counts of each word in the text that was read earlier from the first path.
+ 
