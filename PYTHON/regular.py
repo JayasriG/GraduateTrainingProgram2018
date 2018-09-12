@@ -10,3 +10,8 @@ for line in contents:
 with open('a.txt','r') as obj:
 	contents=obj.readlines()
 print re.findall("([A-Za-z]+)\s.*(\$[0-9]+).*",contents)
+
+
+IP Matching:
+	 ip='444.24.28.30'
+	 re.findall('(^[0-2][0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})',ip)
